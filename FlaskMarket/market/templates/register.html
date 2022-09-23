@@ -5,8 +5,8 @@
 <div class="container">
   <form method="POST" class="from-register" style="color: white">
     {{ form.hidden_tag() }}
-   <img src="{{ url_for('static', filename='images/logo.png') }}"  width="{{150}}" class="mt-2 mb-4" />
-    <h1 class="h3 mb-3 font-weight-normal">
+   <img src="{{ url_for('static', filename='images/logo.png') }}"  width="{{150}}" class="mt-2 mb-3" />
+    <h1 class="h4 mb-1 font-weight-normal">
       Please Create your Account
     </h1>
     <br>
@@ -23,8 +23,13 @@
     {{ form.password2(class="form-control", placeholder="Confirm Password") }}
 
     <br>
+ {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+  <div class="checkbox mb-3">
+     <h6>Already have an account?</h6>
+        <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a>
+</div>
 
-    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+   
   </form>
 </div>
 </body>
